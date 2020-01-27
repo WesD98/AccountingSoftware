@@ -1,0 +1,16 @@
+{% extends 'accounts/index.html' %}
+
+{% block content %}
+	<img src="{{ user.userprofile.image.url}}" width="240" align="right" align="top">
+    <h1>Welcome, {{user.username}}<h1>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<h1>Profile</h1>
+	<p>Username: {{ user }}</p>
+	<p>First Name: {{ user.first_name }}</p>
+	<p>Last Name: {{ user.last_name }}</p>
+	<p>Email: {{ user.email }}</p>
+</div>	 
+{% endblock %}
