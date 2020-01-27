@@ -6,6 +6,9 @@ class UserProfile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.PROTECT)
 	phone = models.IntegerField(default=0)
 	image = models.ImageField(upload_to='profile_image', blank=True)
+	address = models.CharField(max_length=200, default='')
+	DOB = models.CharField(max_length=20, default='')
+
 	
 def create_profile(sender, **kwargs):
 	if kwargs['created']:
