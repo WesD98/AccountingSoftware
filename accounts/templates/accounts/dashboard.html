@@ -1,6 +1,8 @@
 {% extends 'accounts/index.html' %}
 
 {% block content %}
-	<img src="{{ user.userprofile.image.url}}" width="240" align="right" align="top">
+    {% if user.userprofile.image %}
+    <img src="{{ user.userprofile.image.url}}" width="240" align="right" align="top">
+    {% endif %}
     <h1>Welcome, {{user.username}}</h1>
 {% endblock %}
