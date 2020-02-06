@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from accounts.forms import RegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.views.generic.edit import FormView
 def indexView(request):
     return render(request, 'accounts/index.html')
 
@@ -23,3 +24,4 @@ def registerView(request):
 def profileView(request):
 	args = {'user' : request.user}
 	return render(request, 'accounts/profile.html', args)
+    
