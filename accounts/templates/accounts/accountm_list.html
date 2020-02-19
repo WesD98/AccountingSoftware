@@ -1,0 +1,10 @@
+{% extends "accounts/index.html" %}
+
+{% block content %}
+    <h2>Chart of Accounts</h2>
+    <ul>
+        {% for account in object_list %}
+            <li>{{ account.AccountNumber}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
